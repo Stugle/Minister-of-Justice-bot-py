@@ -42,3 +42,13 @@ class Streets(MyDocument):
             return data[len(data) - 1].number + 1
         else:
             return 1
+
+class Premises(MyDocument):
+    streetsname = ReferenceField(Streets)
+    house = IntField()
+    frame = IntField()
+    сadastral_number = IntField()
+    premises = StringField()
+    type = StringField()
+    owner = StringField(default="Имущество города")
+    owner_id = IntField(default="0")
