@@ -1,9 +1,5 @@
 from mongoengine import *  
 
-# BooleanField  #по идеи да или нет
-# IntField  #цифры
-# DateTimeField #время
-# StringField #текст
 connect("Minister-of-Justice")
 
 class MyDocument(Document):
@@ -46,15 +42,3 @@ class Streets(MyDocument):
             return data[len(data) - 1].number + 1
         else:
             return 1
-
-
-#class 
-#t1=Teacher.get_or_create(tid = 'T3', name = 'Mur')
-#print(t1.id)
-#t2=Teacher.get_or_skip(tid = 'T5', name = 'Mur')
-#if t2 != None:
-#    print(t2.id)
-#else:
-#    print('None')
-
-print('Done')
